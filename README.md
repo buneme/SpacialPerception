@@ -1,4 +1,6 @@
-# [SLAM Computing Topics Website](https://startbootstrap.com/template-overviews/clean-blog/)
+# [SLAM Computing Topics Website](https://buneme.github.io/SpacialPerception/index.html)
+
+View the website [here](https://buneme.github.io/SpacialPerception/index.html) 
 
 ## Computing topics
 [Piazza Page](https://piazza.com/class/j8byqanqgfx66)
