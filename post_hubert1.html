@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sensors</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Spacial Perception for Mobile Robotics</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="buneme.html">Buneme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hubert.html">Hubert</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jeewoo.html">Jeewoo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lloyd.html">Lloyd</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/lidar-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>Sensors</h1>
+                    <h2 class="subheading">Types of sensors used and how they work.</h2>
+                    <span class="meta">By
+                <a href="hubert.html">Hubert</a>
+                Mon 5 March</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h4>Sound navigation and ranging (Sonar) Sensors</h4>
+                <p>
+                    Evolution in nature is influencing technology at large, it is no surprise then that field crickets
+                    have been an influence on localising technology that could be used in autonomous vehicles.
+                    After all, sound is one of the primary tools used by the emergency services to clear way on the road
+                    for them to pass and to keep nearby drivers safe.
+                </p>
+                <img class="img-fluid" src="img/sonar.png" alt="">
+                <p>
+                    Based on the reflection of sound waves we are able to calculate an estimate of the distance to
+                    objects and over time their speed and direction. Ultrasonic is used on above ground on vehicles
+                    as due to their high frequency they're not able to be heard by humans or animals and have a range of
+                    about 8 metres.
+                </p>
+                <p>
+                    Tesla's model S sedan uses ultrasonic detection, which they have managed to hide within the body
+                    of their vehicle in order to use SONAR technology without having the sensors mounted on the vehicle.
+                </p>
+                <h4>Radio detection and ranging (Radar) Sensors</h4>
+                <p>
+                    Radar is identical to sonar in all ways except radio waves are used instead, which have a much
+                    larger range and can be altered to vary between accuracy at higher frequencies or range at lower
+                    ones.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Light detection and ranging (Lidar) Sensors</h4>
+                        <p>
+                            Light detection and ranging sensors are used in most autonomous packages in vehicles,
+                            they can use lasers to detect the distance to objects in a radial field around the sensor.
+                            This highly accurate system can be combined with reconstructive algorithms to produce 3
+                            dimensional
+                            scenes of an environment.
+                        </p>
+                        <p>
+                            One large drawback of these systems is the amount of resources required
+                            for them to run accurately in real time, resource usage can be reduced at the cost of
+                            accuracy
+                            which can impact safety and usability.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img style="width:inherit;" src="img/lidar-gif.gif" alt="">
+                    </div>
+                </div>
+
+                <h4>References</h4>
+                <ul>
+                    <li>
+                        <a href="https://repositorium.sdum.uminho.pt/bitstream/1822/2289/1/IJRR02Bicho_etAl.PDF">
+                            Bicho, Mallet, and Schoner / Target Representation on an Autonomous Vehicle (May 2000)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www-sciencedirect-com.iclibezp1.cc.ic.ac.uk/science/article/pii/S0045790615003936">
+                            Self-localization of autonomous underwater vehicles with accurate sound travel time
+                            solutions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tesla.com/en_GB/autopilot">
+                            Tesla UK
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://patentimages.storage.googleapis.com/31/d9/71/09b7ee820b5a35/US20170059697A1.pdf">
+                            US Patent US20170059697A1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.adv-radio-sci.net/3/205/2005/ars-3-205-2005.pdf">
+                            R. H. Rasshofer and K. Gresser / Automotive Radar and Lidar Systems for Next Generation
+                            Driver Assistance Functions (2005)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6179503">
+                            Thorsten Luettel, Michael Himmelsbach, and Hans-Joachim Wuensche / Autonomous Ground
+                            Vehicles Concepts and a Path to the Future
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://github.com/buneme/SpacialPerception">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Spacial Perception, Computing Topics - 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
