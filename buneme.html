@@ -28,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">SLAM</a>
+        <a class="navbar-brand" href="index.html">Autonomous cars</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -65,7 +65,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="page-heading">
               <h1>Buneme</h1>
-              <span class="subheading">About me</span>
+              <span class="subheading">Est. 1999</span>
             </div>
           </div>
         </div>
@@ -76,9 +76,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h4>Some interesting facts</h4>
-          <p>Originally from <a href='https://en.wikipedia.org/wiki/Zambia'>Zambia</a>, from there I moved to <a href='https://en.wikipedia.org/wiki/Cambourne'>Cambourne, Cambridge</a> then <a href='https://en.wikipedia.org/wiki/Maynooth'>Maynooth, Ireland</a> followed by <a href='https://en.wikipedia.org/wiki/Crawley'>Crawley</a>, <a href='https://en.wikipedia.org/wiki/Horley'>Horley</a> and then <a href='https://en.wikipedia.org/wiki/South_Kensington'>South Kensington</a></p>
-          <p><img height='200' src='img/bolt.jpg' align='left' hspace='20'/>In terms of sports, I enjoy tennis, football and badminton. In terms of music, I used to play piano, I now play the guitar, and I've been playing it for about 8 years. The most famous person I've met is Usain Bolt (2014), at a hotel restaurant next to Gatwick Airport.</p>
+          <h4>18 years and counting.....</h4>
+          <p><img height='200' src='img/break.gif' align='left' hspace='20'/>Originally from <a href='https://en.wikipedia.org/wiki/Zambia'>Zambia</a>, from there I moved to <a href='https://en.wikipedia.org/wiki/Cambourne'>Cambourne, Cambridge</a> then <a href='https://en.wikipedia.org/wiki/Maynooth'>Maynooth, Ireland</a><img height='200' src='img/buneme_open_evening.png' align='right' hspace='20'/> followed by <a href='https://en.wikipedia.org/wiki/Crawley'>Crawley</a>, <a href='https://en.wikipedia.org/wiki/Horley'>Horley</a> and then <a href='https://en.wikipedia.org/wiki/South_Kensington'>South Kensington</a></p>
+          <p><img height='150' src='img/bolt.jpg' align='left' hspace='20'/>In terms of sports, I enjoy tennis, football and badminton. In terms of music, I used to play piano, <img height='200' src='img/hidenseek.jpg' align='right' hspace='20'/>I now play the guitar, and I've been playing it for about 8 years. The most famous person I've met is Usain Bolt (2014), at a hotel restaurant next to Gatwick Airport.</p>
+          <p><div><img height='250' src='img/sbucks.jpg' align='left' hspace='20'/></div>My first job was at Starbucks at Gatwick Airport, which was only a 15 minute bus drive from where I live.</p>
+          <p>I've been about 7 different schools, the most recent being <a href='http://www.holytrinity.w-sussex.sch.uk/'>Holy Trinity Crawley</a>. I certainly learnt a lot and pushed myself. One of the best learning experiences during that time was being part of the Head Team - but we didn't take things too seriously, the banter was 👌<b>crank up your volume, its top quality stuff</b></p>
+          <video id="video" align='center' width="320" height="240" style='margin: 0 auto;' controls autoplay><source src="videos/holmstead_1.mp4" type="video/mp4" autoplay>Your browser does not support the video tag.</video>
         </div>
       </div>
     </div>
@@ -106,9 +109,25 @@
       </div>
     </footer>
 
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+      //place code inside jQuery ready event handler
+      //to ensure videoElement is available
+      var i = 1;
+      var sources = ['videos/holmstead_1.mp4', 'videos/holmstead_2.mp4', 'videos/buneme_break_sc.mp4', 'videos/buneme_break_sc_2.mp4', 'videos/chilli.mp4', 'videos/sammy.mp4', 'videos/charity_week_1.mp4'];
+      $('#video').bind('ended', function() {
+          //'this' is the DOM video element
+          this.src = sources[i++ % sources.length];
+          this.load();
+          this.play();
+      });
+    });
+    </script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
