@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.clearfix::after {
+  content:"";
+  clear: both;
+  display: table;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.masthead {
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 255);
+  opacity: 0.0;
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0.20;
+}
+
+.jeewoo_img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.socialnetwork {
+  width: 5%;
+}
