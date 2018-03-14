@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Algorithms</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Autonomous cars</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="buneme.html">Buneme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hubert.html">Hubert</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jeewoo.html">Jeewoo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lloyd.html">Lloyd</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/algorithm_pic.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Algorithms</h1>
+              <h2 class="subheading">The algorithms used to make sense of the car's surroundings</h2>
+              <span class="meta">By
+                <a href="lloyd.html">Lloyd</a>
+                on March 15th, 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+              <h2 class="section-heading">Computer Vision</h2>
+              <p></p>
+              <h3>2004</h3>
+            <p><img height='200' src='img/computer-vision.jpg' align='right' hspace='5'/>In 2004, DARPA held their first Grand Challenge. It offered $1 million for whoever could make a car capable of driving 150 miles through the Mojave Desert the fastest.</p>
+              <br>
+              <iframe width="683" height="384" src="https://www.youtube.com/embed/PgnsapPGaaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              
+              <h2 class="section-heading">Sensor fusion</h2>
+              
+              <p>Sensor fusion is how the data from all the sensors like the cameras, radar and LIDAR, are combined to build an understanding of the car’s environment. Some sensors are better than others at certain measurements (e.g. LIDAR and radar are better with distance than cameras), while some can work better in different weather conditions. By combining all of our sensor data, we get a richer understanding of the world. Using sensor fusion, we get fewer false positives or negatives.</p>
+            <h3>Canvasing method</h3>
+            <p>This is when the car looks over all of its sensors to tries to determine whether any of the sensors is giving false data. One way this is done is a voting protocol where if sensors are split on some data (e.g. if something is in front of the car) then it picks the sensors where most other ones agree with and takes that to be more reliable</p>
+              <h3>RANSAC</h3>
+            <p>Random Sample Consensus (RANSAC) aims to guess the parameters of a model by randomly sampling observed data that contains outliers, when outliers are given no influence on the estimates.</p>
+              
+              <h3>Sensor fusion combinations</h3>
+              <p>Sensor fusion can be performed in complementary, competitive, or cooperative combinations</p>
+              <h4>Complementary</h4>
+              <p>When the sensors do not directly depend on each other, but can be combined in order to give a more complete image of the environment. Fusing this data is not too difficult, since the data can simply be added to each other. The obvious disadvantage of is that one or more of the sensors is ineffective, it will lose part of its vision.</p>
+              <p>When each sensor on a car is focused on different areas of the it’s surroundings to build up a picture of the environment, this is a complementary configuration</p>
+              
+              <h4>Competitive</h4>
+              <p>Competitive sensor fusion combinations are used for fault-tolerant and robust systems. Sensors in a competitive configuration have each sensor delivering independent measurements of the same target and can also provide robustness to a system by combining redundant information.</p>
+              <p>There are two possible competitive combinations:</p>
+              <ul>
+                <li>Fault tolerance - the fusion of data from different sensors or the fusion of measurements from a single sensor taken at different instants. A special case of competitive sensor fusion is fault tolerance. Fault tolerance requires an exact specification of the service and the failure modes of the system. In case of a fault covered by the fault hypothesis, the system still has to provide its specified service.</li>
+                  <li>Competitive configurations - provide robustness to a system by delivering a degraded level of service in the presence of faults. While this graceful degradation is weaker than the achievement of fault tolerance, the respective algorithms perform better in terms of resource needs and work well with heterogeneous data sources
+                      <ul>
+                          <li>An example would be the reduction of noise by combining two overlaying camera images</li>
+                      </ul>
+                  </li>
+              </ul>
+              
+              <h4>Cooperative</h4>
+              <p>Combines non-redundant data from all the sensors. The result is often too sensitive to inaccuracies in all participating sensors. Because the data produced is sensitive to inaccuracies present in individual sensors, cooperative sensor fusion is probably the most difficult to design. Thus, in contrast to competitive fusion, cooperative sensor fusion generally decreases accuracy and reliability.</p>
+              <p>An example of a cooperative sensor configuration can be found when stereoscopic vision creates a three-dimensional image by combining two-dimensional images from two cameras at slightly different viewpoints</p>
+
+            <h2 class="section-heading">Localisation</h2>
+
+            <p>*Text*</p>
+              
+              <b>Sources</b>
+            <ul>
+              <li><a href="https://twitter.com/Bill_Gross/status/329069954911580160">Self-driving car picture</a>
+              </li>
+                <li><a href="https://www.automotive-iq.com/electrics-electronics/articles/intelligent-sensor-fusion-smart-cars">AutomotiveIQ - Intelligent sensor fusion for smart cars</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/buneme/SpacialPerception">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Spacial Perception, Computing Topics - 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
