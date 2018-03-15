@@ -28,24 +28,43 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Autonomous cars</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">Autonomous Cars</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="buneme.html">Buneme</a>
+              <a class="nav-link" href="post_lloyd_history.html">History</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="theoryDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Theory
+              </a>
+              <div class="dropdown-menu" aria-labelledby="theoryDropdown">
+                <a class="dropdown-item" href="post_buneme.html">SLAM - Limitations, Safety and reinforcement
+                  learning</a>
+                <a class="dropdown-item" href="post_buneme2.html">Maths behind autonomous vehicles.</a>
+                <a class="dropdown-item" href="post_jeewoo1.html">Classification</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="applicationDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Application
+              </a>
+              <div class="dropdown-menu" aria-labelledby="applicationDropdown">
+                <a class="dropdown-item" href="post_jeewoo2.html">Autonomous Car Companies</a>
+                <a class="dropdown-item" href="post_hubert1.html">Sensors</a>
+                <a class="dropdown-item" href="post_hubert2.html">Advantages and Disadvantages</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="hubert.html">Hubert</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="jeewoo.html">Jeewoo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="lloyd.html">Lloyd</a>
+              <a class="nav-link" href="about_us.html">About us</a>
             </li>
           </ul>
         </div>
@@ -62,7 +81,8 @@
               <h1>History of autonomous vehicles</h1>
               <h2 class="subheading">How autonomous vehicles rose to be a game-changing technology</h2>
               <span class="meta">By
-                  <a href="lloyd.html">Lloyd</a></span>
+                <a href="lloyd.html">Lloyd</a>
+              </span>
             </div>
           </div>
         </div>
@@ -80,17 +100,19 @@
               <p></p>
               <h3>2004</h3>
             <p><img height='200' src='http://www.cajunbot.com/photos/2004_grand_challenge/2004_012.jpg' align='right' hspace='5'/>In 2004, DARPA held their first Grand Challenge. It offered $1 million for whoever could make a car capable of driving 150 miles through the Mojave Desert the fastest.</p>
-              
+
               <p>None of the competitors made it to the finish line, however it made people realise that self-driving cars were possible.</p>
               
               <p>You can watch the highlights of it <a href="https://www.youtube.com/watch?v=FaBJ5sPPmcI">here</a>.</p>
               
               <img height='200' src='img/stanford_darpa_competitor.jpg' align='right' hspace='5'/><h3>2005</h3>
 
+              <h3>2005</h3>
+
             <p>The next one was in 2005, where 5 successfully completed the course. The Stanford racing team was in first place with a time of 6 hours and 54 minutes.</p>
-              
+
               <h2 class="section-heading">Google</h2>
-              
+
               <p>In 2010, Google (now a spin-off company called <a href="https://waymo.com/">Waymo</a>) announced that it had secretly had employees (some of whome competed in DARPA's challenges) working on making a system for self-driving cars with the goal of launching a commericial vehicle by 2020. They hoped it would half the number of car accidents each year.</p>
               <iframe width="704" height="396" src="https://www.youtube.com/embed/aaOB-ErYq6Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <span class="caption text-muted">A video released from Waymo showing off thier self-driving technology</span>
@@ -111,7 +133,7 @@
             <p>The first fatal accident involving a self-driving car was in Florida in May 2016. While a Tesla Model S was in AutoPilot mode, it failed to apply the brakes when a 18-wheel tractor-trailer  made a left turn in front of the Tesla at an intersection on a non-controlled access highway.</p>
 
             <p>Tesla ended its partnership with Mobileye, who was in charge of making the vision-on-a-chip system that processes and analyses images to enable vechile and lane detection for Tesla cars, so that they could work on their on radar system by themselves.</p>
-              
+
               <p>Starting in October 2016, all Tesla’s are built with the necessary hardware to allow full self driving capability (SAE Level 5).</p>
               
               <iframe width="704" height="396" src="https://www.youtube.com/embed/APnN2mClkmk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -120,18 +142,18 @@
             <h2 class="section-heading">Delphi Automative</h2>
 
             <p>In April 2015, Delphi Automative became the first company to complete a coast-to-coast journey across the USA with an automated vehicle, travelling from San Francisco to New York under computer control for 99% of the journey.</p>
-              
+
               <h2 class="section-heading">nuTonomy</h2>
 
             <p>In August 2016, Singapore launched the first self-driving car taxi service, provided by nuTonomy (which was bought by Delphi Automative late last year).</p>
-              
+
               <h2 class="section-heading">General Motors</h2>
 
-              <p><img height='200' src='https://cdn.vox-cdn.com/thumbor/g9TIPlRgXOCdHRwxWOiI6MuE2Cg=/0x0:6144x4099/1820x1213/filters:focal(2581x1559:3563x2541):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/58297953/GM_Cruise_AV.0.jpeg' align='right' hspace='5'/>In January this year, General Motors (GM) - known as one of the leaders in autonomous vehicle technology - announced that it plans to make an autonomous car without a steering wheel or pedals by 2019. You can read more about it <a href="https://goo.gl/Ky3C6B">here</a>.</p>
-              
-              
-              
-              
+              <p><img height='200' src='https://cdn.vox-cdn.com/thumbor/z1KROEDrLBRCEkzlBwrUUHYYhl4=/0x0:6144x4099/1820x1213/filters:focal(2581x1559:3563x2541)/cdn.vox-cdn.com/uploads/chorus_image/image/58297953/GM_Cruise_AV.0.jpeg' align='right' hspace='5'/>In January this year, General Motors (GM) - known as one of the leaders in autonomous vehicle technology - announced that it plans to make an autonomous car without a steering wheel or pedals by 2019. You can read more about it <a href="https://goo.gl/Ky3C6B">here</a>.</p>
+
+
+
+
               <b>Sources</b>
             <ul>
               <li><a href="https://www.wired.com/story/darpa-grand-urban-challenge-self-driving-car/">WIRED - Inside the races that jump-started the self-driving car</a></li>
@@ -142,6 +164,26 @@
                 <li><a href="http://www.wikiwand.com/en/NuTonomy">Wikiwand - NuTonomy</a></li>
                 <li><a href="https://www.theverge.com/2018/1/12/16880978/gm-autonomous-car-2019-detroit-auto-show-2018">The Verge - GM will make an autonomous car without steering wheel or pedals by 2019</a></li>
             </ul>
+          </div>
+          <div class="col-md-3 container-fluid">
+            <div class="card">
+
+              <div class="card-header">
+                <h5 class="card-title">
+                  Sections
+                </h5>
+              </div>
+              <div class="card-body">
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
+                  reinforcement learning</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehichles</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert2.html">Advantages and Disadvantages</a></li>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -154,17 +196,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="https://github.com/buneme/SpacialPerception">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Spacial Perception, Computing Topics - 2018</p>
+            <p class="copyright text-muted">Spatial Perception, Computing Topics - 2018</p>
           </div>
         </div>
       </div>

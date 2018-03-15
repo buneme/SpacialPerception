@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Post</title>
+    <title>SLAM, saftey and more</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,27 +28,43 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">SLAM</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">Autonomous Cars</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="post_lloyd_history.html">History</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="theoryDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Theory
+              </a>
+              <div class="dropdown-menu" aria-labelledby="theoryDropdown">
+                <a class="dropdown-item" href="post_buneme.html">SLAM - Limitations, Safety and reinforcement
+                  learning</a>
+                <a class="dropdown-item" href="post_buneme2.html">Maths behind autonomous vehicles.</a>
+                <a class="dropdown-item" href="post_jeewoo1.html">Classification</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="applicationDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Application
+              </a>
+              <div class="dropdown-menu" aria-labelledby="applicationDropdown">
+                <a class="dropdown-item" href="post_jeewoo2.html">Autonomous Car Companies</a>
+                <a class="dropdown-item" href="post_hubert1.html">Sensors</a>
+                <a class="dropdown-item" href="post_hubert2.html">Advantages and Disadvantages</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="buneme.html">Buneme</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hubert.html">Hubert</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="jeewoo.html">Jeewoo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="lloyd.html">Lloyd</a>
+              <a class="nav-link" href="about_us.html">About us</a>
             </li>
           </ul>
         </div>
@@ -66,7 +82,7 @@
               <h2 class="subheading">All about how SLAM uses the gathered data, along with some limitations, saftey issues, and more</h2>
               <span class="meta">By
                 <a href="buneme.html">Buneme</a>
-                Mon 5 March</span>
+              </span>
             </div>
           </div>
         </div>
@@ -78,6 +94,19 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Definition</h2>
+            <p>SLAM stands for <b>Simultaneous Localisation and Mapping.</b></p>
+            <p>SLAM is not a particular algorithm or piece of software, but instead it is the problem of trying to simultaneously localise (i.e. find the position/orientation of) some sensor with respect to its environment, while at the same time creating a map of the environment.</p>
+            <p>So SLAM depends on sensor data, and I'm going to go on to describe the role that sensor data plays in the SLAM process:</p>
+            <h2 class="section-heading">An overview of the SLAM process</h2>
+            <p>The following pictures, from top left to bottom right give a general overview of the SLAM process</p>
+            <p><img height='200' src='img/slam_principles_1.png' align='left' />1. In this picture, the stars represent landmarks, and initially the position is estimated by sensors.</p>
+            <br><br><br>
+            <p><img height='200' src='img/slam_principles_2.png' align='left'/>2. In this picture, the robot moves thinking that it is in the position represented by the triangle. The dotted line represents the distance that the robot has moved. This distance is given by the odometry alone.</p>
+            <p><img height='200' src='img/slam_principles_3.png' align='left'/>3. Here, the robot measures the distance using sensors <b>and landmarks</b>.</p>
+            <br><br><br><br>
+            <p><img height='200' src='img/slam_principles_4.png' align='left'/>4. Finally, the robot starts relying more on sensors than odometry. The dotted triangle represents where it thinks it is while the solid triangle shows where exactly the robot is.</p>
+
             <h2 class="section-heading">What is done with the data</h2>
             <p>A wide range of data is collected during the SLAM process. One of the most important pieces of data that is collected is data about the surroundings. This data is then used to identify landmarks in the environment.</p>
             <h3>Landmarks</h3>
@@ -101,7 +130,7 @@
             <h4>Landmark extraction</h4>
             <p>There are various algorithms that are used to extract landmarks from the environment.  One example is called Spikes. Another, which I won’t go into, is called RANSAC.</p>
             <h5>Spikes</h5>
-            <p>Spike landmark extraction uses big changes in sensor data to identify landmarks. For example, if a laser scanner is used, then the algorithm finds values in the range of the laser output that differ by a certain amount e.g 1.0 metre. This will identify large changes in the laser scan e.g from when some of the laser scanner beams reflect off of a wall and some of the laser beams don’t hit the wall but are reflected from some things further behind the wall.</p>
+            <p>Spike landmark extraction uses big changes in sensor data to identify landmarks. For example, if a laser scanner is used, <img height='200' src='img/spike.png' align='left' hspace='20'/> then the algorithm finds values in the range of the laser output that differ by a certain amount e.g 1.0 metre. This will identify large changes in the laser scan e.g from when some of the laser scanner beams reflect off of a wall and some of the laser beams don’t hit the wall but are reflected from some things further behind the wall.</p>
             <p>This algorithm assumes that the landscape of the environment will change a lot between two laser beams, so it won’t work very well in smooth environments. Spikes is a fairly simple algorithm, but it is not robust enough in environments that contain people. This is because Spikes will identify people as landmarks because they stand out from the environment. There are various advantages and disadvantages for the different extraction techniques.</p>
 
             <h3>Reinforcement learning</h3>
@@ -110,12 +139,13 @@
             <p> It allows machines to determine ideal behaviour in order to maximise their performance in an environment based on actions that they perform. Reward feedback is used for the machine to learn its behaviour - this is the reinforcement signal.</p>
             <p>This is done by estimating the value of a particular state. The estimate is adjusted over time based on the reward feedback. If all the states and actions are tried a sufficient amount of times then the optimal behaviour will be reached.</p>
             <p>Reinforcement learning is best suited to situations where there is little to no information known about the ideal behaviour beforehand. This means that it is very useful in SLAM algorithms.</p>
-
-            <h5>Saftey</h5>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2xATEwcRpy8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h5><br><br>Saftey</h5>
             <p>Compared to other AI related tasks, SLAM is less of a risk to health and safety because it’s objective is restricted to mapping and navigating it’s way through an environment. The only safety concern related to this would be if an someone used such a process to map an environment for malicious purposes e.g robbers using SLAM to identify the structure of a room in a bank which has restricted access, in order to assist themselves in breaking into the bank.</p>
 
             <h5>Limitations</h5>
-            <p>Solving the SLAM problem is complex practically.</p>
+            <br>
+            <h6>Computational cost</h6>
             <p>This is mainly because it requires a large amount of computing power to gather all the sensor data from the environment and then process that data in order to both map and localise the robot. This is even more of an issue when dealing with 3D, rather than 2D SLAM</li>
 
             <blockquote class="blockquote">
@@ -123,8 +153,11 @@
             </br>
             Aulinas, Josep (2008). "The SLAM Problem: A Survey". Proceedings of the 2008 Conference on Artificial Intelligence Research & Development: 363–71. Retrieved July 15, 2015.
             </blockquote>
+            <br>
+            <h6>Related to landmark extraction</h6>
+            <p>Another limitation, which was disccussed earlier, is that moving objects can confuse the landmark extraction process.</p>
+            <h6>Memory costs</h6>
             <p>In terms of reinforcement learning, it takes up too much memory to store the values of each state, especially in complex problems like SLAM. A solution to this is to use approximation techniques like decision trees or neural networks. However, these approximations can negatively impact the quality of the solution.</p>
-
             <b>Sources</b>
             <ul>
               <li><a href="https://www.kudan.eu/kudan-news/an-introduction-to-slam/">Kudan.eu</a></li>
@@ -132,6 +165,26 @@
               <li>Aulinas, Josep (2008). "The SLAM Problem: A Survey". Proceedings of the 2008 Conference on Artificial Intelligence Research & Development: 363–71. Retrieved July 15, 2015.</li>
               <li>Dissanayake, MWM Gamini, et al. "A solution to the simultaneous localization and map building (SLAM) problem." IEEE Transactions on robotics and automation 17.3 (2001): 229-241.</li>
             </ul>
+          </div>
+          <div class="col-md-3 container-fluid">
+            <div class="card">
+
+              <div class="card-header">
+                <h5 class="card-title">
+                  Sections
+                </h5>
+              </div>
+              <div class="card-body">
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
+                  reinforcement learning</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehichles</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert2.html">Advantages and Disadvantages</a></li>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -144,17 +197,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="https://github.com/buneme/SpacialPerception">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Spacial Perception, Computing Topics - 2018</p>
+            <p class="copyright text-muted">Spatial Perception, Computing Topics - 2018</p>
           </div>
         </div>
       </div>
