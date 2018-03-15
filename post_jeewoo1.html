@@ -3,305 +3,347 @@
 
 <head>
 
-  <style>
-    table {
-      font-family: arial, sans-serif;
-      font-size: 16px;
-      border-collapse: collapse;
-      width: 100%;
-    }
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            font-size: 16px;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-    td,
-    th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-  </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Classification</title>
+    <title>Classification</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
         <a class="navbar-brand" href="index.html">Autonomous Cars</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
+            Menu
+            <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="post_lloyd_history.html">History</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="theoryDropdown" role="button"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Theory
-              </a>
-              <div class="dropdown-menu" aria-labelledby="theoryDropdown">
-                <a class="dropdown-item" href="post_buneme.html">SLAM - Limitations, Safety and reinforcement
-                  learning</a>
-                <a class="dropdown-item" href="post_lloyd_algorithms.html">Algorithms
-                  </a>
-                <a class="dropdown-item" href="post_buneme2.html">Maths behind autonomous vehicles.</a>
-                <a class="dropdown-item" href="post_jeewoo1.html">Classification</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="applicationDropdown" role="button"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Application
-              </a>
-              <div class="dropdown-menu" aria-labelledby="applicationDropdown">
-                <a class="dropdown-item" href="post_jeewoo2.html">Autonomous Car Companies</a>
-                <a class="dropdown-item" href="post_hubert1.html">Sensors</a>
-                <a class="dropdown-item" href="post_hubert2.html">Advantages and Disadvantages</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about_us.html">About us</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="post_lloyd_history.html">History</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="theoryDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Theory
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="theoryDropdown">
+                        <a class="dropdown-item" href="post_buneme.html">SLAM - Limitations, Safety and reinforcement
+                            learning</a>
+                        <a class="dropdown-item" href="post_lloyd_algorithms.html">Algorithms
+                        </a>
+                        <a class="dropdown-item" href="post_buneme2.html">Maths behind autonomous vehicles.</a>
+                        <a class="dropdown-item" href="post_jeewoo1.html">Classification</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="applicationDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Application
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="applicationDropdown">
+                        <a class="dropdown-item" href="post_jeewoo2.html">Autonomous Car Companies</a>
+                        <a class="dropdown-item" href="post_hubert1.html">Sensors</a>
+                        <a class="dropdown-item" href="post_hubert2.html">Advantages and Disadvantages</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About us</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/temp_autonomy.jpg')">
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/temp_autonomy.jpg')">
     <div class="overlay"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1>Classification</h1>
-            <h2 class="subheading">Classification system of automation</h2>
-            <span class="meta">By
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>Classification</h1>
+                    <h2 class="subheading">Classification system of automation</h2>
+                    <span class="meta">By
                 <a href="jeewoo.html">Jeewoo</a>
                 </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <h4>Classification of Automation</h4>
-          <p>
-            The first classification system of automation was first introduced in 2014 in a publication by SAE international, standard J3016 ‘Taxonomy and Definitions for Terms Related to On-Road Motor Vehicle Automated Driving Systems’. The main purpose of this
-            standard was to “provide a common taxonomy and definitions for automated driving in order to simplify communication and facilitate collaboration within technical and policy domains.” [1] There was a former classification system proposed by
-            the National Highway Traffic Safety Administration in United States in 2013, but was replaced by SAE standard in 2016.
-          </p>
-          <p>
-            The classification system “identifies six levels of driving automation from no automation to full automation.” [1] These six levels are mainly divided into two parts; Level 0 to level 2 involve human intervention during driving, while level 3 to 5 do
-            not need any human intervention.
-          </p>
-          <p>
-            There are some key terms to be known to better understand the taxonomy. These definitions were from [1].
-          </p>
-          <ul style="text-decoration; padding:0; margin-top:0">
-            <li><b>Dynamic driving task</b> includes the operational (steering, braking, accelerating, monitoring the vehicle and roadway) and tactical (responding to events, determining when to change lanes, turn, use signals, etc.) aspects of the driving
-              tasks, but not the strategic (determining destinations and waypoints) aspect of the driving task.</li>
-            <li><b>Driving mode</b> is a type of driving scenario with characteristic dynamic driving task requirements (e.g., expressway merging, high speed cruising, low speed traffic jam, closed-campus operations, etc)</li>
-            <li><b>Request to Intervene</b> is notification by the automated driving system to a human driver that s/he should promptly begin or resume performance of the dynamic driving task.[1]</li>
-          </ul>
-        </div>
-      </div>
-    <table align="center" style="width:1000px;">
-      <tr>
-        <th width="10%">SAE level</th>
-        <th>Name</th>
-        <th min-width="700px">Definition</th>
-        <th>Execution of Controls</th>
-        <th>Monitored by</th>
-        <th>Fallback Performance by</th>
-        <th>System Capability</th>
-      </tr>
-      <tr>
-        <td colspan="7">Human driver monitors the driving environment</td>
-      </tr>
-      <tr>
-        <td>0</td>
-        <td>No automation</td>
-        <td>the full-time performance by the human driver of all aspects of the dynamic driving task even when enhanced by warning or intervention systems.</td>
-        <td>Human driver</td>
-        <td>Human driver</td>
-        <td>Human driver</td>
-        <td>N/A</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Driver Assistance</td>
-        <td>the driving mode-specific execution by a driver assistance system of either steering or acceleration/deceleration using information about the driving environment and with the expectation that the human driver perform all remaining aspects of the
-          dynamic driving task</td>
-        <td>Human driver and system</td>
-        <td>Human driver</td>
-        <td>Human driver</td>
-        <td>Some driving modes</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Partial Automation</td>
-        <td>The driving mode-specific execution by one or more driver assistance systems of both steering and acceleration/deceleration using information about the driving environment and with the expectation that the human driver perform all remaining aspects
-          of the dynamic driving task</td>
-        <td>System</td>
-        <td>Human driver</td>
-        <td>Human driver</td>
-        <td>Some driving modes</td>
-      </tr>
-      <tr>
-        <td colspan="7">Automated driving system monitors the driving environment</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Conditional Automation</td>
-        <td>the driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task with the expectation that the human driver will respond appropriately to a request to intervene</td>
-        <td>System</td>
-        <td>System</td>
-        <td>Human driver</td>
-        <td>Some driving modes</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>High Automation</td>
-        <td>the driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task, even if a human driver does not respond appropriately to a request to intervene</td>
-        <td>System</td>
-        <td>System</td>
-        <td>System</td>
-        <td>Some driving modes</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Full Automation</td>
-        <td>the full-time performance by an automated driving system of all aspects of the dynamic driving task under all roadway and environmental conditions that can be managed by a human driver</td>
-        <td>System</td>
-        <td>System</td>
-        <td>System</td>
-        <td>All driving modes</td>
-      </tr>
-    </table>
-      </div>
-
-    <div class="container">
-      <h5 style="margin-top:40px"> Analysis on Each Level in the Classification</h5>
-      <p>
-        <b>Level 0</b>: System does not intervene or warn human drivers.
-      </p>
-      <p>
-        <b>Level 1</b>: Both system and driver have controls over the vehicle. System can control steering, acceleration and deceleration. Still, human driver has to do the majority of the work.
-      </p>
-      <p>
-        <b>Level 2</b>: Even though the system takes full controls on the vehicles, human driver always has to be ready to intervene. Tesla’s Autopilot system is often described as level 2, as the autopilot system does not activate if human driver takes
-        their hands off from the wheel.
-      </p>
-      <p>
-        <b>Level 3</b>: From level 3 to 5, the system itself monitors the driving environment. At level 3,system can perform most of the driving tasks, but it still requires human driver to be prepared for the intervention request.
-      </p>
-      <p>
-        <b>Level 4</b>: At this level, the system must perform all the driving tasks; If there is no response from human driver after the intervention is requested, the system must make its own decision, for example, park the car on the side of the road.
-      </p>
-      <p>
-        <b>Level 5</b>: There is no need of human driver at this level. All the driving tasks will be performed by the system.
-      </p>
-
-      <figure>
-        <img width="100%" src="img/sae_automation_levels.png" hspace='20' style="display:block; margin: 0 auto" />
-        <figcaption style="font-size:16px; text-align:center">SAE levels of automation diagram by NHTSA </figcaption>
-      </figure>
-
-      <h5>References</h5>
-      <ul>
-        <li>
-          <a href="https://web.archive.org/web/20170903105244/https://www.sae.org/misc/pdfs/automated_driving.pdf">
-                            SAE International / AUTOMATED DRIVING LEVELS OF DRIVING AUTOMATION J3016 [1]
-                        </a>
-        </li>
-        <li>
-          <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/self-driving-car-technology-when-will-the-robots-hit-the-road ">
-                             Kersten Heineke, Philipp Kampshoff, Armen Mkrtchyan and Emily Shao / Self-driving car technology: When will the robots hit the road? [2]
-                        </a>
-        </li>
-        <li>
-          <a href="http://www.wired.co.uk/article/autonomous-car-levels-sae-ranking">
-                            Matt Burgess / When does a car become truly autonomous? Levels of self-driving technology explained [3]
-                        </a>
-          </li>
-      </ul>
-    </div>
-
-
-    <div class="col-md-3 container-fluid">
-            <div class="card">
-
-              <div class="card-header">
-                <h5 class="card-title">
-                  Sections
-                </h5>
-              </div>
-              <div class="card-body">
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
-                  reinforcement learning</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehichles</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
-                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert2.html">Advantages and Disadvantages</a></li>
-              </div>
+                </div>
             </div>
-          </div>
-        
-      
-  </article>
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p class="copyright text-muted">Spatial Perception, Computing Topics - 2018</p>
         </div>
-      </div>
     </div>
-  </footer>
+</header>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h4>Classification of Automation</h4>
+                <p>
+                    The first classification system of automation was first introduced in 2014 in a publication by SAE
+                    international, standard J3016 ‘Taxonomy and Definitions for Terms Related to On-Road Motor Vehicle
+                    Automated Driving Systems’. The main purpose of this
+                    standard was to “provide a common taxonomy and definitions for automated driving in order to
+                    simplify communication and facilitate collaboration within technical and policy domains.” [1] There
+                    was a former classification system proposed by
+                    the National Highway Traffic Safety Administration in United States in 2013, but was replaced by SAE
+                    standard in 2016.
+                </p>
+                <p>
+                    The classification system “identifies six levels of driving automation from no automation to full
+                    automation.” [1] These six levels are mainly divided into two parts; Level 0 to level 2 involve
+                    human intervention during driving, while level 3 to 5 do
+                    not need any human intervention.
+                </p>
+                <p>
+                    There are some key terms to be known to better understand the taxonomy. These definitions were from
+                    [1].
+                </p>
+                <ul style="text-decoration; padding:0; margin-top:0">
+                    <li><b>Dynamic driving task</b> includes the operational (steering, braking, accelerating,
+                        monitoring the vehicle and roadway) and tactical (responding to events, determining when to
+                        change lanes, turn, use signals, etc.) aspects of the driving
+                        tasks, but not the strategic (determining destinations and waypoints) aspect of the driving
+                        task.
+                    </li>
+                    <li><b>Driving mode</b> is a type of driving scenario with characteristic dynamic driving task
+                        requirements (e.g., expressway merging, high speed cruising, low speed traffic jam,
+                        closed-campus operations, etc)
+                    </li>
+                    <li><b>Request to Intervene</b> is notification by the automated driving system to a human driver
+                        that s/he should promptly begin or resume performance of the dynamic driving task.[1]
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 container-fluid">
+                <div class="card">
 
-  <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            Sections
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
+                            reinforcement learning</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehicles</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
+                        <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert2.html">Advantages and Disadvantages</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table align="center" style="width:1000px;">
+            <tr>
+                <th width="10%">SAE level</th>
+                <th>Name</th>
+                <th min-width="700px">Definition</th>
+                <th>Execution of Controls</th>
+                <th>Monitored by</th>
+                <th>Fallback Performance by</th>
+                <th>System Capability</th>
+            </tr>
+            <tr>
+                <td colspan="7">Human driver monitors the driving environment</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>No automation</td>
+                <td>the full-time performance by the human driver of all aspects of the dynamic driving task even when
+                    enhanced by warning or intervention systems.
+                </td>
+                <td>Human driver</td>
+                <td>Human driver</td>
+                <td>Human driver</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Driver Assistance</td>
+                <td>the driving mode-specific execution by a driver assistance system of either steering or
+                    acceleration/deceleration using information about the driving environment and with the expectation
+                    that the human driver perform all remaining aspects of the
+                    dynamic driving task
+                </td>
+                <td>Human driver and system</td>
+                <td>Human driver</td>
+                <td>Human driver</td>
+                <td>Some driving modes</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Partial Automation</td>
+                <td>The driving mode-specific execution by one or more driver assistance systems of both steering and
+                    acceleration/deceleration using information about the driving environment and with the expectation
+                    that the human driver perform all remaining aspects
+                    of the dynamic driving task
+                </td>
+                <td>System</td>
+                <td>Human driver</td>
+                <td>Human driver</td>
+                <td>Some driving modes</td>
+            </tr>
+            <tr>
+                <td colspan="7">Automated driving system monitors the driving environment</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Conditional Automation</td>
+                <td>the driving mode-specific performance by an automated driving system of all aspects of the dynamic
+                    driving task with the expectation that the human driver will respond appropriately to a request to
+                    intervene
+                </td>
+                <td>System</td>
+                <td>System</td>
+                <td>Human driver</td>
+                <td>Some driving modes</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>High Automation</td>
+                <td>the driving mode-specific performance by an automated driving system of all aspects of the dynamic
+                    driving task, even if a human driver does not respond appropriately to a request to intervene
+                </td>
+                <td>System</td>
+                <td>System</td>
+                <td>System</td>
+                <td>Some driving modes</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Full Automation</td>
+                <td>the full-time performance by an automated driving system of all aspects of the dynamic driving task
+                    under all roadway and environmental conditions that can be managed by a human driver
+                </td>
+                <td>System</td>
+                <td>System</td>
+                <td>System</td>
+                <td>All driving modes</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h5 style="margin-top:40px"> Analysis on Each Level in the Classification</h5>
+        <p>
+            <b>Level 0</b>: System does not intervene or warn human drivers.
+        </p>
+        <p>
+            <b>Level 1</b>: Both system and driver have controls over the vehicle. System can control steering,
+            acceleration and deceleration. Still, human driver has to do the majority of the work.
+        </p>
+        <p>
+            <b>Level 2</b>: Even though the system takes full controls on the vehicles, human driver always has to be
+            ready to intervene. Tesla’s Autopilot system is often described as level 2, as the autopilot system does not
+            activate if human driver takes
+            their hands off from the wheel.
+        </p>
+        <p>
+            <b>Level 3</b>: From level 3 to 5, the system itself monitors the driving environment. At level 3,system can
+            perform most of the driving tasks, but it still requires human driver to be prepared for the intervention
+            request.
+        </p>
+        <p>
+            <b>Level 4</b>: At this level, the system must perform all the driving tasks; If there is no response from
+            human driver after the intervention is requested, the system must make its own decision, for example, park
+            the car on the side of the road.
+        </p>
+        <p>
+            <b>Level 5</b>: There is no need of human driver at this level. All the driving tasks will be performed by
+            the system.
+        </p>
+
+        <figure>
+            <img width="100%" src="img/sae_automation_levels.png" hspace='20' style="display:block; margin: 0 auto"/>
+            <figcaption style="font-size:16px; text-align:center">SAE levels of automation diagram by NHTSA</figcaption>
+        </figure>
+
+        <h5>References</h5>
+        <ul>
+            <li>
+                <a href="https://web.archive.org/web/20170903105244/https://www.sae.org/misc/pdfs/automated_driving.pdf">
+                    SAE International / AUTOMATED DRIVING LEVELS OF DRIVING AUTOMATION J3016 [1]
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/self-driving-car-technology-when-will-the-robots-hit-the-road ">
+                    Kersten Heineke, Philipp Kampshoff, Armen Mkrtchyan and Emily Shao / Self-driving car technology:
+                    When will the robots hit the road? [2]
+                </a>
+            </li>
+            <li>
+                <a href="http://www.wired.co.uk/article/autonomous-car-levels-sae-ranking">
+                    Matt Burgess / When does a car become truly autonomous? Levels of self-driving technology explained
+                    [3]
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+</article>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p class="copyright text-muted">Spatial Perception, Computing Topics - 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
 
 </body>
 
