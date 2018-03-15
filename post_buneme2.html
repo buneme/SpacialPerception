@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Maths behind autonomous vehicles</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Autonomous cars</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="buneme.html">Buneme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hubert.html">Hubert</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jeewoo.html">Jeewoo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lloyd.html">Lloyd</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/maths-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Maths behind autonomous vehicles</h1>
+              <h2 class="subheading">A very brief look at some of the maths that makes driverless cars work</h2>
+              <span class="meta">By
+                <a href="buneme.html">Buneme</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Overview</h2>
+            <p>The purpose of this section is to introduce you to some of the math topics that are used when making driverless cars, and where possible, the ways in which they are used</p>
+            <h2 class="section-heading">Reinforcement learning</h2>
+            <img class="img-fluid" src="img/math-chart.png"/>
+            <span class="caption text-muted">An estimation of the different topics that go into reinforcement learning</span>
+            <p>The graph above, taken from <a href="https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568">towardsdatascience.com</a> gives a very rough estimate of how often various maths topics are used in machine learning
+            (an umbrella term that includes reinforcement learning).
+            </p>
+            <p>
+              In order to keep things brief, we will only look at the 2 most commonly used maths areas (according to the graph) which are <b>Linear Algebra</b> and <b>Statistics</b>.
+            </p>
+            <h4>Linear algebra</h4>
+            <p>
+              Linear algebra is the branch of mathematics that deals with linear equation such as <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4f0f2986d54c01f3bccf464d266dfac923c80f3"/>
+              linear functions, and their representations through matricies and vector spaces. Topics such as matrix operations, eigenvalues and eigenvectors, and vector spaces are used in the optimization methods used for reinforcement learning.
+            </p>
+            <p>
+              In essence, machine learning as a whole is data intensive. This is because machine learning algorithms aren't very effective unless they are trained using lots of data sets. And linear algebra allows us to easily and quickly understand
+              and manipulate this data when training an autonomous device.
+            </p>
+            <p>
+              An important part of linear algbra which is used in Machine learning is the concept of Tensors (from which Google got the name for <a href="https://www.tensorflow.org/">TensorFlow</a>)
+            </p>
+            <h5>Tensors</h5>
+            <p>
+            A tensor is the basic building block of modern machine learning.
+            At its core it’s a data container. Mostly it contains numbers. Sometimes it even contains strings, but that’s rare.
+            We can visualize the various types of tensors like this
+            </p>
+            <img height="400" src="https://cdn-images-1.medium.com/max/2000/1*_D5ZvufDS38WkhK9rK32hQ.jpeg"/>
+            <h6>0D Tensors/Scalars</h6>
+            <p>
+            Any number that goes into a tensor is called a "scalar"
+            In fact you can have a single number tensor, which we call a 0D tensor, aka a tensor with 0 dimensions. It’s nothing more than a bucket with a one number in it. Imagine a bucket with a single drop of water and you have a 0D tensor.
+            </p>
+            <h6>1D Tensors/Vectors</h6>
+            <p>
+            In programming, this is the same as an array. You can also think of a 1D tensor as a vector. Tensors are defined by how many axes they have in total. A 1D tensor has exactly one axis.
+            </p>
+            <h6>2D Tensors/Vectors</h6>
+            <p>
+            This can be thought of as a matrix. We can visualize this as a grid of numbers with rows and columns.Those columns and rows represent two axes. A matrix is a 2D tensor, meaning it is two dimensional, aka a tensor with 2 axes.
+            </p>
+            <h6>3D Tensors/Vectors</h6>
+            <p>
+             Often we have to store a number of examples of 2D tensors in their own bucket, which gives us a 3D tensor. You can therefore think of a 3D tensor as a cube.
+            </p>
+            <h6>n-dimensional Tensors</h6>
+            <p>
+            We can keep stacking cubes together to create bigger and bigger tensors to encode different types of data - 4D tensors, 5D tensors and so on up to N. In laymans terms, N is another way of defining an unknown number of additional units in a set
+            that continues up to an unknown point. It could be 5, 10 or a zillion.
+            </p>
+            <h6>Data that is usually stored in different types of tensors</h6>
+            <ul>
+              <li>
+                <b>3D = Time series</b> Medical scans, for instance, can be encoded with the following fields: <font color="green">(time, frequency, channel)</font>
+                <br>
+                Now if we had multiple patients with EEG scans, that would become a 4D tensor, like this:
+                <br>
+                <font color="green">(sample_size, time, frequency, channel)</font>
+              </li>
+              <li>
+                <b>4D = Images</b> Why 4D? An image is typically represented as<br> <font color="green">[width, height, color_depth] = 3D</font>.
+                But we don’t usually work with a single image or document in machine learning. We have a set. We might have 10,000 images of tulips,
+                which means we have a 4D tensor, like this: <font color="green">[sample_size, width, height, color_depth] = 4D</font>
+              </li>
+              <li>
+                <b>5D = Videos</b> Because a video can be represented by the following paramaters:
+                <br>
+                <font color="green">(sample_size, frames, width, height, color_depth)</font>
+              </li>
+            </ul>
+            <h6>Summary</h6>
+            Linear algebra is an important part of machine learning. Data is needed in order to train models, and using tensors allows us to store, process and manipulate the data using vector algbra.
+            <br>
+            <br>
+            <h4>Probability Theory & Statistics</h4>
+            <p>
+              A few examples are combinatorics, random variables, variance and expectation, and sampling methods.
+            </p>
+            <p>
+              Machine learning is all about predictive modelling: creating models with the intention of making predictions. These models are based on data which needs to be collected, by using a sampling method.
+              Typically used sampling methods include ‘simple random sampling’, ‘systematic sampling’, ‘stratified sampling’, and often used in practice, ‘diversity-based sampling’.
+            </p>
+            <p>
+              Let's look at diversity based sampling. It is normally used in machine learning when the dataset has lot of similar data items. It doesn't make sense to train a model using similar data multiple
+              times because it takes extra time and no new information is gained. <b>Diversity-based sampling methods</b> solve this problem and thus increase the efficieny in the training process by removing
+              very similar data items in the data set. Because of this, the training time will be reduced contributing to an overall lower time needed to reach the solution. Additionally, the training set after
+              applying 'diversity-based sampling' is much more typical and is able to represent features of the data better.
+            </p>
+            <h4>Summary</h4>
+            <p>
+            Although this was a very brief overview that looked at only 2 examples, it serves to show the important role that maths plays in machine learning, and the examples should help you appreciate some of the many maths concepts that
+            are used when building autonomous cars that use reinforcement learning.
+            </p>
+
+            <b>Sources</b>
+            <ul>
+              <li><a href="https://www.quora.com/What-are-the-applications-of-linear-algebra-in-machine-learning">Quora</a>
+              <li><a href="https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568">Towards Data Science</a></li>
+              <li><a href="http://www.big-data.tips/sampling-methods">Big Data Tips</a></li>
+              <li><a href="https://www.khanacademy.org/math/multivariable-calculus">Khan Acadamy</a></li>
+              <li><a href="https://www.quora.com/How-is-multivariable-calculus-used-in-computer-science">Quora</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 container-fluid">
+            <div class="card">
+
+              <div class="card-header">
+                <h5 class="card-title">
+                  Sections
+                </h5>
+              </div>
+              <div class="card-body">
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
+                  reinforcement learning</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehichles</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
+                <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert2.html">Advantages and Disadvantages</a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/buneme/SpacialPerception">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Spacial Perception, Computing Topics - 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

@@ -36,9 +36,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="buneme.html">Buneme</a>
             </li>
             <li class="nav-item">
@@ -58,7 +55,7 @@
 
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/buneme-about-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/buneme-about-bg.gif')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -78,10 +75,14 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <h4>18 years and counting.....</h4>
           <p><img height='200' src='img/break.gif' align='left' hspace='20'/>Originally from <a href='https://en.wikipedia.org/wiki/Zambia'>Zambia</a>, from there I moved to <a href='https://en.wikipedia.org/wiki/Cambourne'>Cambourne, Cambridge</a> then <a href='https://en.wikipedia.org/wiki/Maynooth'>Maynooth, Ireland</a><img height='200' src='img/buneme_open_evening.png' align='right' hspace='20'/> followed by <a href='https://en.wikipedia.org/wiki/Crawley'>Crawley</a>, <a href='https://en.wikipedia.org/wiki/Horley'>Horley</a> and then <a href='https://en.wikipedia.org/wiki/South_Kensington'>South Kensington</a></p>
-          <p><img height='150' src='img/bolt.jpg' align='left' hspace='20'/>In terms of sports, I enjoy tennis, football and badminton. In terms of music, I used to play piano, <img height='200' src='img/hidenseek.jpg' align='right' hspace='20'/>I now play the guitar, and I've been playing it for about 8 years. The most famous person I've met is Usain Bolt (2014), at a hotel restaurant next to Gatwick Airport.</p>
+          <p><img height='150' src='img/bolt.jpg' align='left' hspace='20'/>In terms of sports, I enjoy tennis, football and badminton. In terms of music, I used to play piano, I now play the guitar, and I've been playing it for about 8 years. The most famous person I've met is Usain Bolt (2014), at a hotel restaurant next to Gatwick Airport.</p>
           <p><div><img height='250' src='img/sbucks.jpg' align='left' hspace='20'/></div>My first job was at Starbucks at Gatwick Airport, which was only a 15 minute bus drive from where I live.</p>
-          <p>I've been about 7 different schools, the most recent being <a href='http://www.holytrinity.w-sussex.sch.uk/'>Holy Trinity Crawley</a>. I certainly learnt a lot and pushed myself. One of the best learning experiences during that time was being part of the Head Team - but we didn't take things too seriously, the banter was 👌<b>crank up your volume, its top quality stuff</b></p>
-          <video id="video" align='center' width="320" height="240" style='margin: 0 auto;' controls autoplay><source src="videos/holmstead_1.mp4" type="video/mp4" autoplay>Your browser does not support the video tag.</video>
+          <p>
+            <img width="150" src="https://lh3.googleusercontent.com/rqsSV0mTPEz8phURA8WXQe7sk8LB8KftxzV9j7bKmuoO4BvUwleREDbuVZE07I2RkbM=w300" align="left"/>I've also done lots of work on Android apps. My latest, and most successful is <a href="https://play.google.com/store/apps/details?id=com.buneme.fluctuate&">Fluctuate</a>, a universal price tracking app. Its been mentioned on <a href="http://www.androidpolice.com/2018/01/01/18-new-notable-android-apps-last-two-weeks-12-19-17-1-1-18/#Fluctuate_-_Universal_Price_Tracker">
+            Android Police</a>, <a href="https://phandroid.com/2017/12/23/best-android-apps-december-2017-3/">Phandroid</a>,<a href="https://www.producthunt.com/posts/fluctuate">Product Hunt</a> and a few other review sites.
+          </p>
+          <p>I've been about 7 different schools, the most recent being <a href='http://www.holytrinity.w-sussex.sch.uk/'>Holy Trinity Crawley</a>. I certainly learnt a lot and pushed myself. One of the best learning experiences during that time was being part of the Head Team - but we didn't take things too seriously, <b>here are a few random examples I found - its top quality stuff 👌</b></p>
+          <video id="video" align='center' width="320" height="240" style='margin: 0 auto;' controls autoplay><source src="videos/holmstead_2.mp4" type="video/mp4" autoplay>Your browser does not support the video tag.</video>
         </div>
         <div class="col-md-3 container-fluid">
           <div class="card">
@@ -95,6 +96,7 @@
               <li style="list-style-type: none; font-size: 16px;"><a href="post_lloyd_history.html">History</a></li>
               <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme.html">SLAM - Limitations, Safety and
                 reinforcement learning</a></li>
+              <li style="list-style-type: none; font-size: 16px;"><a href="post_buneme2.html">Maths behind autonomous vehichles</a></li>
               <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo1.html">Classification</a></li>
               <li style="list-style-type: none; font-size: 16px;"><a href="post_jeewoo2.html">Autonomous Car Companies</a></li>
               <li style="list-style-type: none; font-size: 16px;"><a href="post_hubert1.html">Sensors</a></li>
@@ -138,7 +140,7 @@
       //place code inside jQuery ready event handler
       //to ensure videoElement is available
       var i = 1;
-      var sources = ['videos/holmstead_1.mp4', 'videos/holmstead_2.mp4', 'videos/buneme_break_sc.mp4', 'videos/buneme_break_sc_2.mp4', 'videos/chilli.mp4', 'videos/sammy.mp4', 'videos/charity_week_1.mp4'];
+      var sources = ['videos/holmstead_2.mp4', 'videos/buneme_break_sc.mp4', 'videos/buneme_break_sc_2.mp4'];
       $('#video').bind('ended', function() {
           //'this' is the DOM video element
           this.src = sources[i++ % sources.length];
