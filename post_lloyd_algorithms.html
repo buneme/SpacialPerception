@@ -62,8 +62,7 @@
               <h1>Algorithms</h1>
               <h2 class="subheading">The algorithms used to make sense of the car's surroundings</h2>
               <span class="meta">By
-                <a href="lloyd.html">Lloyd</a>
-                on March 15th, 2018</span>
+                  <a href="lloyd.html">Lloyd</a></span>
             </div>
           </div>
         </div>
@@ -77,10 +76,21 @@
           <div class="col-lg-8 col-md-10 mx-auto">
               <h2 class="section-heading">Computer Vision</h2>
               <p></p>
-              <h3>2004</h3>
-            <p><img height='200' src='img/computer-vision.jpg' align='right' hspace='5'/>In 2004, DARPA held their first Grand Challenge. It offered $1 million for whoever could make a car capable of driving 150 miles through the Mojave Desert the fastest.</p>
-              <br>
+              <h3>Intro to Computer Vision</h3>
+            <p>Computer vision is a field in Computing that tries to give computers and understanding of the world through vision, using sensors such as cameras or radar. Essentially, it tries to automate human vision. A lot of the time (such as in autonomous cars), machine learning is used to implement computer vision, so that the computer can find and make-decisions off of patters it sees.</p>
+              
               <iframe width="683" height="384" src="https://www.youtube.com/embed/PgnsapPGaaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <br>
+              <p></p>
+              <h3>How it works<img height='300' src='img/feature_extraction.jpg' align='right' hspace='5'/></h3>
+              <p>The first thing it will do (after gaining and pre-processing the data) is feature extraction. This will involve finding lines, corners and edges</p>
+            
+              <p>The next step is segmentation. This is where specific images or parts of an image are chosen for further processing. Segmentation makes use of intermediate-level processing that identifies things such as boundaries, surfaces and volumes</p>
+              
+              <p>The final step is high-level processing, where a small set of data is put forward for image recognition. This is the step where the car will decide if there is a person in front of it for example, or a car driving along side it.</p>
+              
+              <img height='410' src='img/computer-vision.jpg' align='right' hspace='5'/>
+              <span class="caption text-muted">An example of the final result of computer vision.</span>
               
               <h2 class="section-heading">Sensor fusion</h2>
               
@@ -89,6 +99,18 @@
             <p>This is when the car looks over all of its sensors to tries to determine whether any of the sensors is giving false data. One way this is done is a voting protocol where if sensors are split on some data (e.g. if something is in front of the car) then it picks the sensors where most other ones agree with and takes that to be more reliable</p>
               <h3>RANSAC</h3>
             <p>Random Sample Consensus (RANSAC) aims to guess the parameters of a model by randomly sampling observed data that contains outliers, when outliers are given no influence on the estimates.</p>
+              
+              <img height='350' src='img/ransac%20unfitted.png' align='left' hspace='5' />
+              <img height='350' src='img/ransac_fitted.png' align='right' hspace='5'/>
+              <span class="caption text-muted">Left: A data set with many outliers that we want a line to be fitted to. Right: A fitted line with RANSAC where outliers have no influence on the result.</span>
+              <br>
+              <h3>Deep learning</h3>
+              <p>The final approach we will discuss is fusing multiple inputs using a deep learning approach. When doing RGB-D (Red, Green, Blue and Depth) object recognition, both RGB and D data are first  processed separately by a pretrained Convolutional Neural Network (CNN), whose outputs are then concatenated and converged. This can be used for many things (as well as sensor fusion in cars), such as in <a href="http://journals.sagepub.com/doi/abs/10.1177/0278364914549607">this paper</a>, where RGB-D data is used for detecting robotic grasps.</p>
+              
+              <h4>Deep reinforcement learning</h4>
+              <p>This method uses deep neural network models as function approximators. The neural network represents a value function from which a policy can be derived. Q(s,a) is the expected discounted return (Q-value) of executing an action a in a given state s and executing policy π afterwards, an is defined as:</p>
+              <img height='100' src='img/sensor_fusion_rl.png' align='middle' hspace='5'/>
+              <p>The reward r in each time step is discounted with a factor γ ∈ [0,1], which gives more weight to short-term rewards. The policy π (a|s) determines which action to take in each state. The optimal policy is found when following the optimal Q function Q∗ = maxπ E_π [Q(s,a)]. In Q-learning, Q∗ is typically found by iteratively taking the action with the highest Q-value, i.e. π (a|s) = argmaxaQ(s,a), until convergence</p>
               
               <h3>Sensor fusion combinations</h3>
               <p>Sensor fusion can be performed in complementary, competitive, or cooperative combinations</p>
@@ -111,7 +133,8 @@
               <h4>Cooperative</h4>
               <p>Combines non-redundant data from all the sensors. The result is often too sensitive to inaccuracies in all participating sensors. Because the data produced is sensitive to inaccuracies present in individual sensors, cooperative sensor fusion is probably the most difficult to design. Thus, in contrast to competitive fusion, cooperative sensor fusion generally decreases accuracy and reliability.</p>
               <p>An example of a cooperative sensor configuration can be found when stereoscopic vision creates a three-dimensional image by combining two-dimensional images from two cameras at slightly different viewpoints</p>
-
+                <img height='400' src='img/sensor_fusion_layout.jpg' align='centre' hspace='5'/>
+              <span class="caption text-muted">An example of a layout of sensors on a car.</span>
             <h2 class="section-heading">SLAM</h2>
 
             <p>The next part of the process is Simultaneous Localisation and Mapping (SLAM), which you can read about <a href="post_buneme.html">here</a></p>
@@ -119,6 +142,7 @@
               <b>Sources</b>
             <ul>
               <li><a href="https://twitter.com/Bill_Gross/status/329069954911580160">Self-driving car picture</a>
+                  <li><a href="https://en.wikipedia.org/wiki/Computer_vision">Wikipedia - Computer Vision</a>
               </li>
                 <li><a href="https://www.automotive-iq.com/electrics-electronics/articles/intelligent-sensor-fusion-smart-cars">AutomotiveIQ - Intelligent sensor fusion for smart cars</a></li>
                 <li><a href="https://en.wikipedia.org/wiki/Random_sample_consensus">Wikipedia - Random sample consensus</a></li>
